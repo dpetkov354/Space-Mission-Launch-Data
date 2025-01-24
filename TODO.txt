@@ -1,0 +1,23 @@
+1.Extract the data in  raw format
+
+2. Clean the data by:
+    - Removing duplicates
+    - Removing null values
+    - Removing unnamed column
+    - Formating Float values
+    - Formating Date values
+
+3. Load the transformed data into a database
+
+4. Create a dashboard with:
+    - Organization/Failed Missions
+    - Organization/Successful Missions
+    - Rocket Type/Successful Missions
+    - Rocket Type/Failed Missions
+    - Location Most Launches
+    - Launches per month/location
+    - Organization/Successful Rate
+    - Organization price totals
+    - Organization average price for launch
+
+5. Automate the process
