@@ -1,3 +1,15 @@
+1.Extract the data in  raw format #####DONE
+
+2. Clean the data by: #####DONE
+    - Removing duplicates
+    - Removing null values
+    - Removing unnamed column
+    - Formating Float values
+    - Formating Date values
+    - Add country column from location
+    - Add rocket and payload columns
+
+3. Load the transformed data into a database #####DONE
 
 4. Create a dashboard with:
     - Organization/Failed Missions
