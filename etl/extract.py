@@ -35,7 +35,16 @@ csv_file_path = "../raw_dataset/mission_launches.csv"
 df = pd.read_csv(csv_file_path)
 
 # Rename columns to match SQL table schema
-df.columns = ['id', 'unnamed', 'organisation', 'location', 'date', 'detail', 'rocket_status', 'price', 'mission_status']
+df.columns = ['id',
+              'unnamed',
+              'organisation',
+              'location',
+              'date',
+              'detail',
+              'rocket_status',
+              'price',
+              'mission_status'
+              ]
 
 # Write the DataFrame to the SQL database
 try:
@@ -43,7 +52,7 @@ try:
         # Start a transaction
         with connection.begin():
             # Deleting all rows in the table do a rewrite
-            connection.execute(text("DELETE FROM raw_data;"))
+            connection.execute(text("TRUNCATE TABLE raw_data;"))
             print("All rows in 'raw_data' have been deleted.")
 
             # Insert the new data

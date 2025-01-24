@@ -11,7 +11,7 @@ CREATE DATABASE spacemissiondb
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
 
-### DDL for the spacemission table ###
+### DDL for the raw_data table ###
 
 CREATE TABLE IF NOT EXISTS public.raw_data
 (
@@ -23,5 +23,22 @@ CREATE TABLE IF NOT EXISTS public.raw_data
     detail character varying(255),
     rocket_status character varying(50),
     price character varying(255),
+    mission_status character varying(50)
+);
+
+### DDL for the clean_data table ###
+
+CREATE TABLE IF NOT EXISTS public.cleaned_data
+(
+    id SERIAL PRIMARY KEY,
+    organisation character varying(50),
+	launch_country character varying(255),
+    location character varying(255),
+    date timestamp,
+    detail character varying(255),
+	rocket character varying(255),
+	payload character varying(255),
+    rocket_status character varying(50),
+    price double precision,
     mission_status character varying(50)
 );
