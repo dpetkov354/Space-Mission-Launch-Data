@@ -10,18 +10,15 @@
 3. Load the transformed data into a database with aggregates #####DONE
     - Add country column from location
     - Add rocket and payload columns
-
-4. Create a dashboard with:
-    - Organization/Failed Missions
-    - Organization/Successful Missions
-    - Rocket Type/Successful Missions
-    - Rocket Type/Failed Missions
-    - Location Most Launches
-    - Country launches count
-    - Launches per month/location
-    - Organization/Successful Rate
-    - Organization price totals
-    - Organization average price for launch
     - Detail split in rockets and payload counts
 
-5. Automate the process
+4. Automate the process #####DONE
+
+5. Create a dashboard with:
+    - Organization/Failed Missions #####DONE
+    - Rocket Type/Failed Missions #####DONE
+    - Country launches count #####DONE
+    - Organization price totals #####DONE
+    - Organization average price for launch #####DONE
+
+6. Create a simple web page to display the dashboard
