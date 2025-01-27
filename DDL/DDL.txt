@@ -32,6 +32,20 @@ CREATE TABLE IF NOT EXISTS public.cleaned_data
 (
     id SERIAL PRIMARY KEY,
     organisation character varying(50),
+    location character varying(255),
+    date timestamp,
+    detail character varying(255),
+    rocket_status character varying(50),
+    price double precision,
+    mission_status character varying(50)
+);
+
+### DDL for the aggregate_data table ###
+
+CREATE TABLE IF NOT EXISTS public.aggregate_data
+(
+    id SERIAL PRIMARY KEY,
+    organisation character varying(50),
 	launch_country character varying(255),
     location character varying(255),
     date timestamp,

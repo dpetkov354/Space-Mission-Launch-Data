@@ -26,24 +26,15 @@ try:
     # Drop the 'unnamed' column
     raw_data.drop(columns=['unnamed'], inplace=True)
 
-    # Extract the country from the location column
-    raw_data['launch_country'] = raw_data['location'].str.extract(r',\s*([^,]+)$')
-
     # Substitute rows with null values in the 'price' column with 0
     raw_data['price'] = raw_data['price'].fillna(0)
-
-    # Split the 'detail' column into 'rocket' and 'payload'
-    raw_data[['rocket', 'payload']] = raw_data['detail'].str.split(' \| ', expand=True)
 
     # Remove rows with null values for the specified columns
     required_columns = ['id',
                         'organisation',
                         'location',
-                        'launch_country',
                         'date',
                         'detail',
-                        'rocket',
-                        'payload',
                         'rocket_status',
                         'price',
                         'mission_status'
